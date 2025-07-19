@@ -59,15 +59,10 @@ const Hero = () => {
   return (
     <section id="hero" className="hero section" ref={heroRef}>
       <div className="hero-background">
-        <div className="cyber-grid"></div>
-        <div className="neural-network">
-          {[...Array(50)].map((_, i) => (
-            <div key={i} className={`neural-node node-${i}`}></div>
-          ))}
+        <div className="cyber-grid">
         </div>
-      </div>
-
-      <div className="container">
+  
+            <div className="container">
         <motion.div 
           className="hero-content"
           variants={containerVariants}
@@ -148,6 +143,7 @@ const Hero = () => {
               }
             }}
           >
+          
             <div className="scroll-text">Scroll to Explore</div>
             <div className="scroll-arrow">
               <span></span>
@@ -178,7 +174,7 @@ const Hero = () => {
           </div>
         </motion.div>
       </div>
-
+</div>
       <div className="hero-overlay"></div>
     </section>
   );

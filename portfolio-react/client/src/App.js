@@ -11,6 +11,7 @@ import Skills from './components/Skills';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 import ParticleBackground from './components/ParticleBackground';
+import GlobalNeuralNetwork from './components/GlobalNeuralNetwork';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 
@@ -46,6 +47,7 @@ function App() {
   return (
     <div className="App">
       <ParticleBackground />
+      <GlobalNeuralNetwork />
       <Header />
       <Hero />
       <About />
