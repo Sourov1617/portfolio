@@ -88,11 +88,11 @@ const About = () => {
                 <div className="details-grid">
                   <div className="detail-item">
                     <span className="detail-label">Name:</span>
-                    <span className="detail-value">Your Name</span>
+                    <span className="detail-value">Sourov Nandi</span>
                   </div>
                   <div className="detail-item">
                     <span className="detail-label">Age:</span>
-                    <span className="detail-value">21 Years</span>
+                    <span className="detail-value">22 Years</span>
                   </div>
                   <div className="detail-item">
                     <span className="detail-label">Location:</span>
@@ -100,7 +100,7 @@ const About = () => {
                   </div>
                   <div className="detail-item">
                     <span className="detail-label">Languages:</span>
-                    <span className="detail-value">English, Hindi</span>
+                    <span className="detail-value">English, Bengali, Hindi</span>
                   </div>
                   <div className="detail-item">
                     <span className="detail-label">Interests:</span>
@@ -119,7 +119,7 @@ const About = () => {
                 <div className="profile-frame">
                   <div className="profile-image">
                     <img 
-                      src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" 
+                      src="https://i.postimg.cc/VsTGyYJT/picture.jpg" 
                       alt="Profile"
                     />
                     <div className="profile-overlay"></div>
@@ -166,21 +166,21 @@ const About = () => {
               <div className="stat-icon">💼</div>
               <div className="stat-content">
                 <h4>Experience</h4>
-                <p>2+ Years</p>
+                <p>1+ Years</p>
               </div>
             </div>
             <div className="stat-card glass-container">
               <div className="stat-icon">🏆</div>
               <div className="stat-content">
                 <h4>Projects</h4>
-                <p>50+ Completed</p>
+                <p>20+ Completed</p>
               </div>
             </div>
             <div className="stat-card glass-container">
               <div className="stat-icon">⚡</div>
               <div className="stat-content">
                 <h4>Technologies</h4>
-                <p>15+ Mastered</p>
+                <p>10+ Mastered</p>
               </div>
             </div>
           </motion.div>

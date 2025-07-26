@@ -13,41 +13,41 @@ const Education = () => {
     {
       id: 1,
       degree: "B.Tech Computer Science & Engineering",
-      institution: "XYZ University",
-      duration: "2021 - 2025",
+      institution: "KIIT University",
+      duration: "2022 - 2026",
       grade: "CGPA: 8.5/10",
       description: "Comprehensive study of computer science fundamentals, programming languages, data structures, algorithms, and software engineering principles.",
       achievements: [
-        "Dean's List for 3 consecutive semesters",
+        // "Dean's List for 3 consecutive semesters",
         "Led a team of 5 in final year project",
         "Published research paper on Machine Learning"
       ],
-      skills: ["Data Structures", "Algorithms", "OOP", "Database Systems", "Software Engineering"]
+      skills: ["Data Structures", "Algorithms", "OOP", "Database Systems", "Operating Systems", "Software Engineering"]
     },
     {
       id: 2,
       degree: "Higher Secondary (12th)",
-      institution: "ABC School",
+      institution: "YASIN College",
       duration: "2019 - 2021",
-      grade: "Percentage: 95%",
+      grade: "Percentage: 89%",
       description: "Specialized in Mathematics, Physics, and Chemistry with strong foundation in analytical thinking and problem-solving.",
       achievements: [
         "School Topper in Mathematics",
-        "Won Science Olympiad at State Level",
-        "Captain of the School Quiz Team"
+        // "Won Science Olympiad at State Level",
+        "Captain of the College Quiz Team"
       ],
       skills: ["Mathematics", "Physics", "Chemistry", "Analytical Thinking", "Problem Solving"]
     },
     {
       id: 3,
       degree: "Secondary School (10th)",
-      institution: "ABC School",
+      institution: "ZILLA School",
       duration: "2017 - 2019",
-      grade: "Percentage: 96%",
+      grade: "Percentage: 84%",
       description: "Strong foundation in core subjects with emphasis on mathematics and science, developing critical thinking skills.",
       achievements: [
-        "School Topper overall",
-        "Perfect score in Mathematics",
+        // "School Topper overall",
+        "Good score in Mathematics",
         "Student Council President"
       ],
       skills: ["Core Mathematics", "Science", "English", "Leadership", "Communication"]
@@ -225,7 +225,7 @@ const Education = () => {
             </div>
             <div className="stat-item">
               <div className="stat-icon">🏆</div>
-              <div className="stat-number">95%</div>
+              <div className="stat-number">85%</div>
               <div className="stat-label">Average Grade</div>
             </div>
             <div className="stat-item">

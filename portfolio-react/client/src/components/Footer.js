@@ -129,7 +129,7 @@ const Footer = () => {
             © {currentYear} Portfolio. Built with ❤️ using React & Modern Web Technologies.
           </p>
           <p style={{color: 'var(--text-secondary)', fontSize: '0.9rem'}}>
-            Made by <span className="holographic-text">Your Name</span>
+            Made by <span className="holographic-text">Sourov Nandi</span>
           </p>
         </motion.div>
       </div>

@@ -4,10 +4,10 @@ import { useInView } from 'react-intersection-observer';
 import './Projects.css';
 
 const Projects = () => {
-  const [ref, inView] = useInView({
-    threshold: 0.3,
-    triggerOnce: true
-  });
+  // const [ref, inView] = useInView({
+  //   threshold: 0.1,
+  //   triggerOnce: false
+  // });
 
   const [selectedProject, setSelectedProject] = useState(null);
   const [filter, setFilter] = useState('all');
@@ -172,7 +172,7 @@ const Projects = () => {
   };
 
   return (
-    <section id="projects" className="projects section" ref={ref}>
+    <section id="projects" className="projects section">
       <div className="projects-background">
         <img 
           src="https://images.unsplash.com/photo-1518709268805-4e9042af2176?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80" 
@@ -187,9 +187,9 @@ const Projects = () => {
           className="projects-content"
           variants={containerVariants}
           initial="hidden"
-          animate={inView ? "visible" : "hidden"}
+          animate="visible"
         >
-          <motion.div className="projects-header" variants={itemVariants}>
+          <motion.div className="projects-header" variants={itemVariants} animate={{ opacity: 1, y: 0 }}>
             <h2 className="section-title">
               <span className="title-accent">Featured</span>
               <span className="holographic-text">Projects</span>
@@ -200,7 +200,7 @@ const Projects = () => {
             <div className="title-underline"></div>
           </motion.div>
 
-          <motion.div className="project-filters" variants={itemVariants}>
+          <motion.div className="project-filters" variants={itemVariants} animate={{ opacity: 1, y: 0 }}>
             {categories.map(category => (
               <button
                 key={category.id}
@@ -221,7 +221,7 @@ const Projects = () => {
                   className="project-card glass-container"
                   variants={itemVariants}
                   layout
-                  initial={{ opacity: 0, scale: 0.8 }}
+                  initial={{ opacity: 1, scale: 1 }}
                   animate={{ opacity: 1, scale: 1 }}
                   exit={{ opacity: 0, scale: 0.8 }}
                   whileHover={{ y: -10, rotateX: 5 }}
