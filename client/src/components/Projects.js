@@ -20,7 +20,7 @@ const Projects = () => {
       description: "Machine learning application that analyzes investment portfolios and provides intelligent recommendations.",
       fullDescription: "A comprehensive AI-powered investment analysis tool that uses advanced machine learning algorithms to evaluate portfolio performance, risk assessment, and provide personalized investment recommendations. The application features real-time market data integration, predictive analytics, and intuitive data visualizations.",
       image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-      technologies: ["Python", "TensorFlow", "React", "Node.js", "MongoDB", "D3.js"],
+      technologies: ["Python", "PyTorch", "React", "Node.js", "PostgreSQL", "LSTM_Model"],
       features: [
         "Real-time portfolio tracking",
         "Risk assessment algorithms",
@@ -49,7 +49,7 @@ const Projects = () => {
         "Citizen feedback system"
       ],
       liveUrl: "https://smart-city-dashboard.com",
-      githubUrl: "https://github.com/yourusername/smart-city",
+      githubUrl: "https://github.com/Sourov1617/smart-city-dashboard",
       status: "completed",
       duration: "6 months"
     },

@@ -5,8 +5,8 @@ import './Education.css';
 
 const Education = () => {
   const [ref, inView] = useInView({
-    threshold: 0.3,
-    triggerOnce: true
+    threshold: 0.2,
+    triggerOnce: false
   });
 
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -31,10 +31,10 @@ const Education = () => {
       degree: "Higher Secondary (12th)",
       institution: "YASIN College",
       duration: "2019 - 2021",
-      grade: "Percentage: 89%",
+      grade: "GPA: 5.00/5.00",
       description: "Specialized in Mathematics, Physics, and Chemistry with strong foundation in analytical thinking and problem-solving.",
       achievements: [
-        "School Topper in Mathematics",
+        "Class Topper in Mathematics",
         // "Won Science Olympiad at State Level",
         "Captain of the College Quiz Team"
       ],
@@ -45,7 +45,7 @@ const Education = () => {
       degree: "Secondary School (10th)",
       institution: "ZILLA School",
       duration: "2017 - 2019",
-      grade: "Percentage: 84%",
+      grade: "GPA: 4.89/5.00",
       description: "Strong foundation in core subjects with emphasis on mathematics and science, developing critical thinking skills.",
       achievements: [
         // "School Topper overall",
@@ -117,24 +117,22 @@ const Education = () => {
     visible: {
       opacity: 1,
       transition: {
-        delayChildren: 0.3,
-        staggerChildren: 0.2
+        delayChildren: 0.1,
+        staggerChildren: 0.1
       }
     }
   };
 
   const cardVariants = {
     hidden: { 
-      x: 100, 
-      opacity: 0,
-      rotateY: 45
+      y: 30, 
+      opacity: 0
     },
     visible: {
-      x: 0,
+      y: 0,
       opacity: 1,
-      rotateY: 0,
       transition: {
-        duration: 0.8,
+        duration: 0.4,
         ease: "easeOut"
       }
     }
@@ -155,8 +153,8 @@ const Education = () => {
         <motion.div 
           className="education-content"
           variants={containerVariants}
-          initial="hidden"
-          animate={inView ? "visible" : "hidden"}
+          initial="visible"
+          animate="visible"
         >
           <motion.div className="education-header" variants={cardVariants}>
             <h2 className="section-title">

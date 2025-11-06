@@ -19,16 +19,36 @@ const Header = () => {
   }, []);
 
   const getQuote = async () => {
+    console.log('🎯 Get Quote button clicked!');
+    console.log('Current showQuote state:', showQuote);
+    console.log('Current quote state:', quote);
+    
     try {
+      console.log('📡 Fetching quote from API...');
       const response = await axios.get('/api/quote');
-      setQuote(response.data.quote);
+      console.log('✅ Quote received:', response.data);
+      const newQuote = response.data.quote;
+      console.log('Setting quote to:', newQuote);
+      setQuote(newQuote);
+      console.log('Setting showQuote to true');
       setShowQuote(true);
-      setTimeout(() => setShowQuote(false), 5000);
+      console.log('Quote should now be visible!');
+      setTimeout(() => {
+        console.log('Auto-hiding quote after 8 seconds');
+        setShowQuote(false);
+      }, 8000);
     } catch (error) {
-      console.error('Error fetching quote:', error);
-      setQuote('The only way to do great work is to love what you do. - Steve Jobs');
+      console.error('❌ Error fetching quote:', error);
+      console.log('Full error details:', error.message, error.response);
+      const fallbackQuote = 'The only way to do great work is to love what you do. - Steve Jobs';
+      console.log('Using fallback quote:', fallbackQuote);
+      setQuote(fallbackQuote);
+      console.log('Setting showQuote to true (fallback)');
       setShowQuote(true);
-      setTimeout(() => setShowQuote(false), 5000);
+      setTimeout(() => {
+        console.log('Auto-hiding fallback quote after 8 seconds');
+        setShowQuote(false);
+      }, 8000);
     }
   };
 
@@ -133,15 +153,19 @@ const Header = () => {
         )}
       </motion.header>
 
-      {showQuote && (
+      {/* Debug: Always log the state */}
+      {console.log('🔍 Render - showQuote:', showQuote, 'quote:', quote)}
+      
+      {showQuote && quote && (
         <motion.div 
           className="quote-overlay"
           initial={{ opacity: 0, scale: 0.5 }}
           animate={{ opacity: 1, scale: 1 }}
           exit={{ opacity: 0, scale: 0.5 }}
           transition={{ duration: 0.5 }}
+          onClick={() => setShowQuote(false)}
         >
-          <div className="quote-container glass-container">
+          <div className="quote-container glass-container" onClick={(e) => e.stopPropagation()}>
             <div className="quote-text">{quote}</div>
             <button 
               className="quote-close"

@@ -5,9 +5,11 @@ import './About.css';
 
 const About = () => {
   const [ref, inView] = useInView({
-    threshold: 0.3,
-    triggerOnce: true
+    threshold: 0.1,
+    triggerOnce: false
   });
+
+  console.log('About component - inView:', inView);
 
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -52,8 +54,8 @@ const About = () => {
         <motion.div 
           className="about-content"
           variants={containerVariants}
-          initial="hidden"
-          animate={inView ? "visible" : "hidden"}
+          initial="visible"
+          animate="visible"
         >
           <motion.div className="about-header" variants={itemVariants}>
             <h2 className="section-title">
@@ -88,7 +90,7 @@ const About = () => {
                 <div className="details-grid">
                   <div className="detail-item">
                     <span className="detail-label">Name:</span>
-                    <span className="detail-value">Sourov Nandi</span>
+                    <span className="detail-value">Saurov Nandi</span>
                   </div>
                   <div className="detail-item">
                     <span className="detail-label">Age:</span>
@@ -104,7 +106,7 @@ const About = () => {
                   </div>
                   <div className="detail-item">
                     <span className="detail-label">Interests:</span>
-                    <span className="detail-value">AI, Web Dev, Gaming</span>
+                    <span className="detail-value">AI, Web Dev, </span>
                   </div>
                   <div className="detail-item">
                     <span className="detail-label">Availability:</span>
@@ -154,6 +156,33 @@ const About = () => {
             </motion.div>
           </div>
 
+          <motion.div className="research-section glass-container" variants={itemVariants}>
+            <div className="research-header">
+              <h3 className="holographic-text">
+                <span className="research-icon">📚</span> Research Work
+              </h3>
+            </div>
+            <div className="research-content">
+              <p className="research-intro">
+                Active contributor to academic research with <strong>8 conference papers</strong> (2 published in IEEE) 
+                and <strong>1 journal paper</strong> currently in progress.
+              </p>
+              <div className="research-stats">
+                <div className="research-stat-item">
+                  <div className="stat-number">8</div>
+                  <div className="stat-label">Conference Papers</div>
+                  <div className="stat-note">(2 in IEEE)</div>
+                </div>
+                <div className="research-divider"></div>
+                <div className="research-stat-item">
+                  <div className="stat-number">1</div>
+                  <div className="stat-label">Journal Paper</div>
+                  <div className="stat-note">(In Progress)</div>
+                </div>
+              </div>
+            </div>
+          </motion.div>
+
           <motion.div className="achievement-stats" variants={itemVariants}>
             <div className="stat-card glass-container">
               <div className="stat-icon">🎓</div>
@@ -180,7 +209,7 @@ const About = () => {
               <div className="stat-icon">⚡</div>
               <div className="stat-content">
                 <h4>Technologies</h4>
-                <p>10+ Mastered</p>
+                <p>15+ Mastered</p>
               </div>
             </div>
           </motion.div>

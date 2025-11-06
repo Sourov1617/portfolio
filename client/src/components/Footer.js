@@ -78,10 +78,10 @@ const Footer = () => {
             <h4 style={{color: 'var(--primary-color)', marginBottom: '1rem'}}>Connect</h4>
             <div style={{display: 'flex', gap: '1rem'}}>
               {[
-                { icon: '💼', url: 'https://linkedin.com' },
-                { icon: '💻', url: 'https://github.com' },
-                { icon: '🐦', url: 'https://twitter.com' },
-                { icon: '📧', url: 'mailto:contact@example.com' }
+                { icon: '💼', url: 'https://linkedin.com/in/sourovnandi' },
+                { icon: '💻', url: 'https://github.com/Sourov1617' },
+                { icon: '🐦', url: 'https://twitter.com/sourovnandi' },
+                { icon: '📧', url: 'mailto:sourovnandi1617@gmail.com' }
               ].map((social, index) => (
                 <motion.a
                   key={index}
@@ -129,7 +129,7 @@ const Footer = () => {
             © {currentYear} Portfolio. Built with ❤️ using React & Modern Web Technologies.
           </p>
           <p style={{color: 'var(--text-secondary)', fontSize: '0.9rem'}}>
-            Made by <span className="holographic-text">Sourov Nandi</span>
+            Made by <span className="holographic-text">Saurov Nandi</span>
           </p>
         </motion.div>
       </div>

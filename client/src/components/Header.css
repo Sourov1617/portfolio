@@ -18,19 +18,22 @@
 }
 
 .header-container {
-  max-width: 1200px;
+  max-width: 1400px;
   margin: 0 auto;
   padding: 0 20px;
   display: flex;
   align-items: center;
   justify-content: space-between;
   height: 80px;
+  gap: 3rem;
 }
 
 /* Logo Styles */
 .logo {
   cursor: pointer;
   position: relative;
+  flex-shrink: 0;
+  margin-right: 2rem;
 }
 
 .logo-text {
@@ -48,6 +51,12 @@
 }
 
 /* Navigation Styles */
+.nav {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
 .nav-list {
   display: flex;
   list-style: none;
@@ -152,33 +161,47 @@
 
 /* Quote Overlay */
 .quote-overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.8);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  z-index: 2000;
+  position: fixed !important;
+  top: 0 !important;
+  left: 0 !important;
+  width: 100vw !important;
+  height: 100vh !important;
+  background: rgba(0, 0, 0, 0.9) !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  z-index: 999999 !important;
   padding: 20px;
+  cursor: pointer;
+  pointer-events: all !important;
 }
 
 .quote-container {
-  position: relative;
-  max-width: 600px;
+  position: relative !important;
+  max-width: 700px;
   width: 100%;
+  padding: 40px;
   text-align: center;
   animation: float 3s ease-in-out infinite;
+  cursor: default;
+  background: rgba(20, 20, 40, 0.95) !important;
+  border: 2px solid rgba(0, 255, 255, 0.5) !important;
+  border-radius: 15px;
+  box-shadow: 0 8px 32px 0 rgba(0, 255, 255, 0.5),
+              inset 0 0 20px rgba(0, 255, 255, 0.2),
+              0 0 60px rgba(0, 255, 255, 0.3) !important;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
 }
 
 .quote-text {
-  font-size: 1.4rem;
-  line-height: 1.6;
-  color: var(--text-primary);
+  font-size: 1.6rem;
+  line-height: 1.8;
+  color: #ffffff;
   font-style: italic;
+  font-weight: 400;
   margin-bottom: 20px;
+  text-shadow: 0 0 10px rgba(0, 255, 255, 0.5);
 }
 
 .quote-close {
@@ -335,3 +358,14 @@
     left: 100%;
   }
 }
+
+/* Animations */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
